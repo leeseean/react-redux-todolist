@@ -1,0 +1,78 @@
+.todo-list-item {
+    background-color: yellowgreen;
+    height: 42px;
+    line-height: 42px;
+}
+
+.todo-list-item.finished {
+    background-color: green;
+}
+
+.todo-list-item.finished * {
+    text-decoration: line-through;
+}
+
+.todo-list-item.finished .item-delete {
+    text-decoration: none;
+}
+
+.item-delete {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 11px;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.item-status {
+    width: 14px;
+    height: 14px;
+    margin-top: 14px;
+}
+
+.item-delete:hover {
+    background-color: brown;
+    color: #fff;
+}
+
+.add-item-text {
+    height: 28px;
+    line-height: 28px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.add-item-finish-time {
+    height: 28px;
+    line-height: 28px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.add-item-time-wrapper {
+    margin-left: 10px;
+}
+
+.add-item-button {
+    margin-left: 10px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.item-finish-time {
+    margin-left: 10px;
+}
+
+.add-item {
+    margin-top: 5px;
+}
+
+.todo-list-title {
+    margin-bottom: 20px;
+}
