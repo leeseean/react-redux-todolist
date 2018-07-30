@@ -24,7 +24,6 @@ const AddItem = ({valueToAdd, finishTime, dispatch}) => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps)
     return {valueToAdd: state.valueToAdd, finishTime: state.finishTime};
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {changeStatus, deleteItem} from '../store/actions';
+import {changeStatus, deleteItem, ajaxRequested} from '../store/actions';
 import "../css/Todolist.css";
 import AddItem from './AddItem'
 
@@ -37,12 +37,12 @@ const TodoList = ({lists, dispatch}) => {
                 })}
             </ul>
             <AddItem></AddItem>
+            <button onClick={() => dispatch(dispatch(ajaxRequested({a:1})))}>异步测试</button>
         </div>
     )
 };
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps)
     return {
         lists: state.lists,
     };
