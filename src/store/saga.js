@@ -1,4 +1,4 @@
-import { call, put, takeEvery/* , takeLatest */ } from 'redux-saga/effects';
+import { call, put, /* takeEvery, */ takeLatest } from 'redux-saga/effects';
 import Api from '../api';
 import {
     AJAX_REQUESTED
@@ -11,8 +11,8 @@ import {
 // worker Saga: will be fired on AJAX_REQUESTED actions
 function* ajaxMainfestJson(action) {
    try {
-      const user = yield call(Api.ajaxMainfestJson, action.data);
-      yield put(ajaxSucceeded(user));
+      const res = yield call(Api.ajaxMainfestJson, action.data);
+      yield put(ajaxSucceeded(res.data));
    } catch (e) {
       yield put(ajaxFailed(e.message));
    }
@@ -22,9 +22,9 @@ function* ajaxMainfestJson(action) {
   Starts ajaxMainfestJson on each dispatched `AJAX_REQUESTED` action.
   Allows concurrent fetches of user.
 */
-function* mySaga() {
+/* function* mySaga() {
   yield takeEvery(AJAX_REQUESTED, ajaxMainfestJson);
-}
+} */
 
 /*
   Alternatively you may use takeLatest.
@@ -33,8 +33,8 @@ function* mySaga() {
   dispatched while a fetch is already pending, that pending fetch is cancelled
   and only the latest one will be run.
 */
-/* function* mySaga() {
+function* mySaga() {
   yield takeLatest("AJAX_REQUESTED", ajaxMainfestJson);
-} */
+}
 
 export default mySaga;

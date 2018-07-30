@@ -58,10 +58,9 @@ export default function (state = initialState, action) {
                 finishTime: action.event.target.value
             };
         case AJAX_SUCCEEDED:
-            console.log(action);
             return {
                 ...state,
-                user: action.user
+                lists: [...state.lists, ...action.data]
             };
         case AJAX_FAILED:
             return {

@@ -46,10 +46,10 @@ export const setFinshTime = (event) => {
     };
 };
 
-export const ajaxSucceeded = (user) => {
+export const ajaxSucceeded = (data) => {
     return {
         type: AJAX_SUCCEEDED,
-        user
+        data
     };
 };
 
