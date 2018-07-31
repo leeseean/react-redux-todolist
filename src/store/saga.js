@@ -29,7 +29,7 @@ function* ajaxMainfestJson(action) {
   and only the latest one will be run.
 */
 function* mySaga() {
-  yield takeLatest("AJAX_REQUESTED", ajaxMainfestJson);
+  yield takeLatest(AJAX_REQUESTED, ajaxMainfestJson);
 }
 
 export default mySaga;
