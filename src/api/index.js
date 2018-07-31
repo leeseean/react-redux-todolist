@@ -4,7 +4,7 @@ export default {
     ajaxMainfestJson(data) {
         return axios({
             method: 'get',
-            url: './manifest.json',
+            url: './data.json',
             params: data
         });
     }
