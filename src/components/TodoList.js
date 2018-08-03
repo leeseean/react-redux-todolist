@@ -37,7 +37,7 @@ const TodoList = ({lists, dispatch}) => {
                 })}
             </ul>
             <AddItem></AddItem>
-            <button onClick={() => dispatch(dispatch(ajaxRequested({a:1})))}>异步测试</button>
+            <button onClick={() => dispatch(ajaxRequested({a:1}))}>异步测试</button>
         </div>
     )
 };
